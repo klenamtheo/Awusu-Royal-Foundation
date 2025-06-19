@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - AFIFE SENIOR HIGH SCHOOL</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assetlogo.webp" alt="AFIFE SENIOR HIGH SCHOOL Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="events.html">Events & News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="student.html">Student Portal</a></li>
+                <li><a href="teacher.html">Teacher Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <h1>Gallery</h1>
+            <div class="filter">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="activities">Activities</button>
+                <button class="filter-btn" data-filter="achievements">Achievements</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- Images will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Lightbox for viewing larger images -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="caption"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AFIFE SENIOR HIGH SCHOOL</p>
+            <p>Address: [School Address]</p>
+            <p>Phone: [School Phone Number]</p>
+            <p>Email: <a href="mailto:info@afifeseniorschool.edu.gh">info@afifeseniorschool.edu.gh</a></p>
+            <div class="social-media">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

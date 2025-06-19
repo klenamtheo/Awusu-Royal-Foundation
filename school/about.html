@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Awusu Royal Foundation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5faff;
+      color: black;
+      margin: 0;
+      padding: 0;
+    }
+    footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+ nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+    }
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+    header, footer {
+      background-color: #003366;
+      color: white;
+    }
+  
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+    }
+    .stats, .founders {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .stat-box, .founder {
+      background-color: #e6f0ff;
+      padding: 30px;
+      border-radius: 8px;
+      flex: 1 1 30%;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .founder:hover {
+      transform: scale(1.05);
+    }
+    .founder img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .timeline {
+      margin-top: 50px;
+      border-left: 3px solid #003366;
+      padding-left: 30px;
+    }
+    .timeline-event {
+      margin-bottom: 30px;
+      position: relative;
+    }
+    @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .program, .faculty-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -15px;
+      width: 15px;
+      height: 15px;
+      background-color: #003366;
+      border-radius: 50%;
+    }
+    .testimonial-section {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .testimonial {
+      font-style: italic;
+      font-size: 1.1em;
+      background: #e6f0ff;
+      padding: 20px;
+      margin: auto;
+      border-radius: 8px;
+      width: 60%;
+      min-height: 100px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .testimonial-author {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+    color: #003366;
+    border-radius: 4px;
+    background-color: yellow;
+    transform: scale(1.8);
+}
+.container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Awusu Royal Foundation</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Academic Programs</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2>About Awusu Royal Foundation</h2>
+    <p>
+      Awusu Royal Foundation is dedicated to nurturing excellence in education. We provide a supportive, innovative, and challenging environment for learners of all backgrounds.
+    </p>
+  </section>
+
+  <section class="container stats">
+    <div class="stat-box"><h3 id="students">0</h3><p>Happy Students</p></div>
+    <div class="stat-box"><h3 id="teachers">0</h3><p>Qualified Teachers</p></div>
+    <div class="stat-box"><h3 id="awards">0</h3><p>Awards Won</p></div>
+  </section>
+
+  <section class="container">
+    <h2>Our Founder</h2>
+    <div class="founders">
+      <div class="founder">
+        <img src="CEO.jpg" alt="Founder 1" />
+        <h4>Torgbui Awusu III</h4>
+        <p>Founder & Educationist</p>
+      </div>
+  </section>
+
+  <section class="container timeline">
+    <h2>Our History</h2>
+    <div class="timeline-event">
+      <h4>2001 – School Founded</h4>
+      <p>Awusu Royal Foundation began with just 20 students and 3 teachers.</p>
+    </div>
+    <div class="timeline-event">
+      <h4>2010 – New Science Lab</h4>
+      <p>We inaugurated a state-of-the-art science laboratory for practical learning.</p>
+    </div>
+    <div class="timeline-event">
+      <h4>2020 – National Recognition</h4>
+      <p>The school received the Excellence in Education award by the Ghana Education Service.</p>
+    </div>
+  </section>
+
+  <section class="container testimonial-section">
+    <h2>What People Say</h2>
+    <div class="testimonial" id="testimonialBox">
+      “Awusu Royal Foundation changed my child’s future. The discipline and teaching quality are outstanding.”
+      <div class="testimonial-author" id="testimonialAuthor">– Parent of Class 6 Student</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; Awusu Royal Foundation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Counter
+    function animateValue(id, start, end, duration) {
+      const obj = document.getElementById(id);
+      let startTime = null;
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        obj.innerText = Math.floor(progress * (end - start) + start);
+        if (progress < 1) window.requestAnimationFrame(step);
+      }
+
+      window.requestAnimationFrame(step);
+    }
+
+    animateValue("students", 0, 650, 2000);
+    animateValue("teachers", 0, 35, 2000);
+    animateValue("awards", 0, 12, 2000);
+
+    // Testimonials
+    const testimonials = [
+      {
+        text: "Awusu Royal Foundation changed my child’s future. The discipline and teaching quality are outstanding.",
+        author: "– Parent of Class 6 Student"
+      },
+      {
+        text: "I gained confidence and leadership skills here. It’s more than a school — it’s a family.",
+        author: "– Alumni, 2021"
+      },
+      {
+        text: "The teachers are committed and the school environment is very safe and inspiring.",
+        author: "– Parent of JHS 2 Student"
+      }
+    ];
+
+    let current = 0;
+    setInterval(() => {
+      current = (current + 1) % testimonials.length;
+      document.getElementById("testimonialBox").innerHTML = `
+        “${testimonials[current].text}”
+        <div class="testimonial-author">${testimonials[current].author}</div>
+      `;
+    }, 6000);
+  </script>
+</body>
+</html>

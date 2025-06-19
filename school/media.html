@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media | Awusu Royal Foundation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5faff;
+      color: #003366;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #003366;
+    }
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .filter-buttons button {
+      background-color: #003366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin: 0 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .filter-buttons button:hover,
+    .filter-buttons .active {
+      background-color: #0052a3;
+    }
+    @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .program, .faculty-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+    .media-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .media-item {
+      background-color: #e6f0ff;
+      padding: 10px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .media-item img, .media-item video {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .media-caption {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+    nav ul li a:hover {
+    color: #003366;
+    border-radius: 4px;
+    background-color: yellow;
+    transform: scale(1.8);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Awusu Royal Foundation</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Academics Programs</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2>Our School in Pictures & Videos</h2>
+
+    <div class="filter-buttons">
+      <button class="active" onclick="filterMedia('all')">All</button>
+      <button onclick="filterMedia('photo')">Photos</button>
+      <button onclick="filterMedia('video')">Videos</button>
+    </div>
+
+    <div class="media-gallery">
+      <!-- Photo -->
+      <div class="media-item photo">
+        <img src="images/school-building.jpg" alt="School Building">
+        <div class="media-caption">Our Main School Building</div>
+      </div>
+
+      <div class="media-item photo">
+        <img src="images/students-class.jpg" alt="Classroom Session">
+        <div class="media-caption">Students in Class</div>
+      </div>
+
+      <div class="media-item photo">
+        <img src="images/event-group.jpg" alt="Group Event">
+        <div class="media-caption">Annual Cultural Day</div>
+      </div>
+
+      <!-- Video -->
+      <div class="media-item video">
+        <video controls>
+          <source src="media/school-tour.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="media-caption">Virtual School Tour</div>
+      </div>
+
+      <div class="media-item video">
+        <video controls>
+          <source src="media/student-interview.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <div class="media-caption">Student Testimonials</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Awusu Royal Foundation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterMedia(type) {
+      const buttons = document.querySelectorAll(".filter-buttons button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      event.target.classList.add("active");
+
+      const items = document.querySelectorAll(".media-item");
+      items.forEach(item => {
+        if (type === "all") {
+          item.classList.remove("hidden");
+        } else if (!item.classList.contains(type)) {
+          item.classList.add("hidden");
+        } else {
+          item.classList.remove("hidden");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics - AFIFE SENIOR HIGH SCHOOL</title>
+    <link rel="stylesheet" href="academic.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assetlogo.webp" alt="AFIFE SENIOR HIGH SCHOOL Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="student.html">Student Portal</a></li>
+                <li><a href="teacher.html">Teacher Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="programs">
+            <h1>Academic Programs</h1>
+            <div class="programs-content">
+                <div class="program" id="science">
+                    <h2>Science Program</h2>
+                    <p>Our Science program includes subjects like Physics, Chemistry, and Biology. Students will gain in-depth knowledge and hands-on experience in various scientific fields.</p>
+                    <button class="toggle-info-button" data-target="science-details">Show More</button>
+                    <div id="science-details" class="hidden">
+                        <ul>
+                            <li>Physics: Concepts and Practical Work</li>
+                            <li>Chemistry: Laboratory Techniques and Theoretical Knowledge</li>
+                            <li>Biology: Cell Biology, Genetics, and Ecology</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="program" id="arts">
+                    <h2>Arts Program</h2>
+                    <p>Our Arts program covers subjects like Literature, History, and Fine Arts. This program is designed for students interested in humanities and creative expression.</p>
+                    <button class="toggle-info-button" data-target="arts-details">Show More</button>
+                    <div id="arts-details" class="hidden">
+                        <ul>
+                            <li>Literature: Analysis and Critique of Classic and Modern Works</li>
+                            <li>History: World and Local History Perspectives</li>
+                            <li>Fine Arts: Painting, Sculpture, and Art History</li>
+                            <li>Home Economics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses">
+            <h1>Course Listings</h1>
+            <input type="text" id="course-search" placeholder="Search for a course...">
+            <ul id="course-list">
+                <!-- Courses will be dynamically inserted here -->
+                <li>Literature: Analysis and Critique of Classic and Modern Works</li>
+                <li>History: World and Local History Perspectives</li>
+                <li>Fine Arts: Painting, Sculpture, and Art History</li>
+                <li>Home Economics</li>
+            </ul>
+        </section>
+
+        <section id="faculty">
+            <h1>Our Faculty</h1>
+            <div id="faculty-list">
+                <!-- Faculty members will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AFIFE SENIOR HIGH SCHOOL</p>
+            <p>Address: [School Address]</p>
+            <p>Phone: [School Phone Number]</p>
+            <p>Email: <a href="mailto:info@afifeseniorschool.edu.gh">info@afifeseniorschool.edu.gh</a></p>
+            <div class="social-media">
+                <a href="#"><img src="facebook.webp" alt="Facebook"></a>
+                <a href="#"><img src="x.png" alt="Twitter"></a>
+                <a href="#"><img src="insta.webp" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="academic.js"></script>
+</body>
+</html>

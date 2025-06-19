@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile - Teacher Portal</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assetlogo.webp" alt="AFIFE SENIOR HIGH SCHOOL Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="student.html">Student Portal</a></li>
+                <li><a href="teacher.html">Teacher Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="update-profile">
+            <h1>Update Profile</h1>
+            <form id="update-profile-form">
+                <label for="profile-picture">Profile Picture:</label>
+                <input type="file" id="profile-picture" name="profile_picture" accept="image/*">
+                
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full_name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                
+                <button type="submit">Save Changes</button>
+                <p id="update-message" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+ 
+
+    <script src="update.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - AFIFE SENIOR HIGH SCHOOL</title>
+    <link rel="stylesheet" href="admission.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assetlogo.webp" alt="AFIFE SENIOR HIGH SCHOOL Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="events.html">News & Events</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="student.html">Student Portal</a></li>
+                <li><a href="teacher.html">Teacher Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="application-process">
+            <h1>Application Process</h1>
+            <p>Welcome to the admissions page of AFIFE SENIOR HIGH SCHOOL. Here you will find all the information you need to apply to our school.</p>
+            <p>The application process is straightforward and involves the following steps:</p>
+            <ol>
+                <li>Complete the online application form.</li>
+                <li>Submit required documents as specified below.</li>
+                <li>Attend an entrance interview (if applicable).</li>
+                <li>Receive admission decision via email.</li>
+                <li>Complete the enrollment process.</li>
+            </ol>
+        </section>
+        
+        <section id="requirements">
+            <h2>Admission Requirements</h2>
+            <ul>
+                <li>Completed application form.</li>
+                <li>Copy of birth certificate.</li>
+                <li>Copy of previous school records (transcripts or report cards).</li>
+                <li>Two passport-sized photographs.</li>
+                <li>Proof of residence.</li>
+                <li>Completed health form (if required).</li>
+            </ul>
+        </section>
+        
+        <section id="fees-scholarships">
+            <h2>Fees and Scholarships</h2>
+            <p><strong>Tuition Fees:</strong> Tuition fees are set annually and vary based on the grade level. Please contact our admissions office for the current fee structure.</p>
+            <p><strong>Scholarships:</strong> We offer several scholarships based on academic performance and financial need. Applications for scholarships should be submitted along with the admission application.</p>
+        </section>
+        
+        <section id="online-application">
+            <h2>Online Application Form</h2>
+            <form action="submit-application.php" method="POST">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full_name" required>
+                    
+                    <label for="date-of-birth">Date of Birth:</label>
+                    <input type="date" id="date-of-birth" name="date_of_birth" required>
+                    
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Academic Information</legend>
+                    <label for="previous-school">Previous School:</label>
+                    <input type="text" id="previous-school" name="previous_school" required>
+                    
+                    <label for="grade-level">Grade Level Applying For:</label>
+                    <select id="grade-level" name="grade_level" required>
+                        <option value="">Select Grade Level</option>
+                        <option value="9">Grade 9</option>
+                        <option value="10">Grade 10</option>
+                        <option value="11">Grade 11</option>
+                        <option value="12">Grade 12</option>
+                    </select>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="special-needs">Special Needs (if any):</label>
+                    <textarea id="special-needs" name="special_needs"></textarea>
+                </fieldset>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AFIFE SENIOR HIGH SCHOOL</p>
+            <p>Address: [School Address]</p>
+            <p>Phone: [School Phone Number]</p>
+            <p>Email: <a href="mailto:info@afifeseniorschool.edu.gh">info@afifeseniorschool.edu.gh</a></p>
+            <div class="social-media">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

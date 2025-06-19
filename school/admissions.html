@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admissions | Awusu Royal Foundation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f5faff;
+      color: #003366;
+    }
+    header, footer {
+      background-color: #003366;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .admission-steps {
+      background-color: #e6f0ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .step {
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      margin: 0;
+      color: #003366;
+    }
+
+    .admission-form {
+      background-color: #e6f0ff;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .program, .faculty-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+    form button:hover {
+      background-color: #0052a3;
+    }
+
+    .contact-help {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 15px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    nav ul li a:hover {
+    color: #003366;
+    border-radius: 4px;
+    background-color: yellow;
+    transform: scale(1.8);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Awusu Royal Foundation</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Academic Programs</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2>Admissions</h2>
+
+    <div class="admission-steps fade-in visible">
+      <div class="step">
+        <h3>Step 1: Inquiry</h3>
+        <p>Contact us or visit the school to make inquiries about programs, fees, and requirements.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2: Application</h3>
+        <p>Complete the application form online or collect it from the school office.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3: Interview & Assessment</h3>
+        <p>Attend a scheduled interview and entrance exam for placement.</p>
+      </div>
+      <div class="step">
+        <h3>Step 4: Enrollment</h3>
+        <p>After successful evaluation, proceed with payment and official enrollment.</p>
+      </div>
+    </div>
+
+    <div class="admission-form fade-in visible">
+      <h3 style="text-align:center; margin-bottom:20px;">Apply Now</h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you! Your application has been received.')">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <select required>
+          <option value="">Select Program Level</option>
+          <option>Primary</option>
+          <option>Secondary</option>
+          <option>Extracurricular Only</option>
+        </select>
+        <textarea rows="4" placeholder="Why do you want to join Awusu Royal Foundation?" required></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+
+    <div class="contact-help">
+      <p>Need help? Call us at <strong>02499981700</strong> or email <strong><a href="mailto:info@awusuroyalschool.com">info@awusuroyalschool.com</a></strong></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Awusu Royal Foundation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation on load
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        setTimeout(() => el.classList.add('visible'), 200);
+      });
+    });
+  </script>
+</body>
+</html>
