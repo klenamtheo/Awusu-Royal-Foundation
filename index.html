@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awusu Royal Foundation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styles for interactivity */
+
+        .map-container {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #003366;
+        }
+        .faculty-member {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .faculty-member-details {
+            display: none;
+            padding-left: 20px;
+            color: #555;
+        }
+        #topBtn {
+            position: fixed;
+            bottom: 40px;
+            right: 30px;
+            display: none;
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #modeToggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 8px;
+            background: #ccc;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body.dark-mode {
+            background-color: #111;
+            color: #f4f4f4;
+        }
+        body.dark-mode a {
+            color: #84bfff;
+        }
+.slider-container {
+    position: relative;
+    max-width: 80%;
+    height: 900px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 60%;
+}
+.active {
+    display: block;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    padding: 8px 12px;
+    z-index: 100;
+    border-radius: 5px;
+}
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.6);
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+nav ul li a:hover {
+    color: #003366;
+    border-radius: 4px;
+    background-color: yellow;
+    transform: scale(1.8);
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .program, .faculty-member {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <button id="modeToggle">Dark Mode</button>
+
+    <header>
+        <div class="container">
+            <h1>Awusu Royal Foundation</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Academic Programs</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="fade-in">
+        <div class="container">
+            <h2>Welcome to Awusu Royal Foundation School</h2>
+            <p>At Awusu Royal School, we provide quality education and holistic development to our students.</p>
+        </div>
+    </section>
+    <marquee behavior="scroll" direction="left"><a href="admissions.html">Admissions for 2025/2026 are now open! Apply Now!</a> </marquee>
+
+    <section id="slider" class="fade-in">
+    <div class="slider-container">
+        <div class="slide active">
+            <img src="CEO.jpg" alt="Welcome">
+            <div class="caption">
+                <h3>Welcome to Awusu Royal School</h3>
+                <p>Where education meets excellence.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="class.jpg" alt="Classroom">
+            <div class="caption">
+                <h3>Interactive Learning</h3>
+                <p>Modern classrooms with smart technology.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="ball.webp" alt="Sports">
+            <div class="caption">
+                <h3>Sports & Activities</h3>
+                <p>Building strong minds and bodies.</p>
+            </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Awusu Royal School is dedicated to providing a supportive and challenging learning environment. Our mission is to nurture students' intellectual and personal growth.</p>
+        </div>
+    </section>
+
+    <section id="programs" class="fade-in">
+        <div class="container">
+            <h2>Academic Programs</h2>
+            <div class="program">
+                <h3>Primary Education</h3>
+                <p>Our primary education program focuses on fundamental skills and early learning.</p>
+            </div>
+            <div class="program">
+                <h3>Secondary Education</h3>
+                <p>Our secondary education program prepares students for higher education and future careers.</p>
+            </div>
+            <div class="program">
+                <h3>Extracurricular Activities</h3>
+                <p>We offer a range of extracurricular activities to enhance students' skills and interests.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faculty" class="fade-in">
+        <div class="container">
+            <h2>Meet Our Staff</h2>
+            <div class="faculty-member">
+                <h3>Mr. Ernest Doagbodzi</h3>
+                <p>Administrator</p>
+                <div class="faculty-member-details">Mr. Doagbodzi has over 15 years of experience in teaching sciences and leading school science projects.</div>
+            </div>
+            <div class="faculty-member">
+                <h3>Mr. John Amenyaglo</h3>
+                <p>Headteacher</p>
+                <div class="faculty-member-details">Mr. Amenyaglo is passionate about literature and student communication skills development.</div>
+            </div>
+            <div class="faculty-member">
+                <h3>Torgubi Awusu III</h3>
+                <p>Director</p>
+                <div class="faculty-member-details">Torgubi Awusu III specializes in African history and cultural studies, inspiring young minds with historical insight.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="admissions" class="fade-in">
+        <div class="container">
+            <h2>Admissions</h2>
+            <p>Interested in joining our school? Find out more about our admissions process and apply today!</p>
+            <a href="admissions.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need more information, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:klenamtheophilus@gmail.com">info@awusuroyalschool.com</a></p>
+            <p><strong>Phone:</strong>02499981700</p>
+          
+        </div>
+    </section>
+    <section id="location">
+    <div class="container">
+        <h2>Our Location</h2>
+        <p>Find us at Afife Nolopi Rd, Behind Pentecost Church.</p>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.008305870893!2d0.8077749147541747!3d6.134095995582564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdd55bd32a8fb69%3A0xbbb9b91b23f63241!2sAfife%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1620354567890"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Awusu Royal School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="topBtn">Top</button>
+
+    <script>
+    
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto Slide
+    setInterval(nextSlide, 5000); // Change every 5 seconds
+
+
+
+
+        // Smooth Scroll for Nav Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Faculty Click to Toggle Extra Info
+        document.querySelectorAll('.faculty-member').forEach(member => {
+            member.addEventListener('click', () => {
+                const details = member.querySelector('.faculty-member-details');
+                if (details) {
+                    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+
+        // Scroll Reveal Animation
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.3,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+
+        // Back to Top Button
+        const topBtn = document.getElementById("topBtn");
+        window.onscroll = function () {
+            topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        };
+        topBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dark Mode Toggle
+        document.getElementById('modeToggle').addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
